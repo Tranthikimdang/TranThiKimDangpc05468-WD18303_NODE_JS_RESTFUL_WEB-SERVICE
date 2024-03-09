@@ -1,0 +1,55 @@
+<!-- File: views/inventors.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #007bff;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+  <title>Danh Sách Sản Phẩm Trái Cây</title>
+</head>
+<body>
+  <h1>Danh Sách Sản Phẩm Trái Cây</h1>
+  <ul>
+    <% inventors.forEach(inventor => { %>
+      <li>Tên sản phẩm: <%= inventor.productName %> - Giá: <%= inventor.productPrice %>đ - Ngày sản xuất: <%= inventor.productionDate %> - Ngày hết hạn: <%= inventor.expirationDate %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>

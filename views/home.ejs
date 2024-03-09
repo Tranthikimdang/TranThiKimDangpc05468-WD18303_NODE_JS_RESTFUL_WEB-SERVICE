@@ -1,0 +1,53 @@
+<!-- File: views/add-inventor-form.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #007bff;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+  <title>Danh Sách Trái Cây</title>
+</head>
+<body>
+  <h1>Thêm sản phẩm trái cây</h1>
+  <form action="/inventor" method="POST">
+    <input type="text" id="productName" name="productName" placeholder="Nhập tên sản phẩm">
+    <input type="number" id="productPrice" name="productPrice" placeholder="Nhập giá sản phẩm">
+    <br>
+    <input type="date" id="productionDate" name="productionDate" placeholder="Ngày sản xuất">
+    <input type="date" id="expirationDate" name="expirationDate"  placeholder="Ngày hết hạn">
+    <br>
+    <button type="submit">Thêm sản phẩm</button>
+  </form>
+  <br>
+  <a href="/inventors">Xem danh sách trái cây</a>
+</body>
+</html>
